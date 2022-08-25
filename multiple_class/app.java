@@ -18,7 +18,7 @@ public class App {
         Sword.intelligence = 5;
         Sword.defense = 1;
         Sword.name = "Raphtalia";
-        Sword.sayMyName();
+        Sword.sayMyName2();
 
         Character Filolial = new Character();
 
@@ -27,7 +27,7 @@ public class App {
         Filolial.intelligence = 1;
         Filolial.defense = 5;
         Filolial.name = "Filo";
-        Filolial.sayMyName();
+        Filolial.sayMyName3();
 
         // Enemy Class
         Enemy Fan = new Enemy();
@@ -46,15 +46,15 @@ public class App {
         Scythe.armor = 5;
         Scythe.hasMagicImmunity = false;
         Scythe.name = "L'Arc Berg Sickle";
-        Scythe.enemyDialogue();
+        Scythe.enemyDialogue2();
 
-        Enemy dragon = new Enemy();
+        Enemy Jewels = new Enemy();
 
-        dragon.damage = 40;
-        dragon.health = 400;
-        dragon.armor = 75;
-        dragon.hasMagicImmunity = false;
-        dragon.name = "Ancient Wyvern";
-        dragon.enemyDialogue();
+        Jewels.damage = 40;
+        Jewels.health = 400;
+        Jewels.armor = 75;
+        Jewels.hasMagicImmunity = false;
+        Jewels.name = "Therese Alexanderite";
+        Jewels.enemyDialogue3();
     }
 }
