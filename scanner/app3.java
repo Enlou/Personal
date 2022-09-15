@@ -28,7 +28,7 @@ public class App {
         // Method call
         String Order = GetOrder();
         double Price = GetTotal();
-        System.out.println("Your order is " + Order + " and the total price is " + Price);
+        System.out.println("Your order is " + Order + " and the total price is " + Price + "$.");
 
         // Close scanner
         scan.close();
