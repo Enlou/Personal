@@ -47,13 +47,21 @@ public class App {
         // System.out.print(Seats[1][1]);
 
             // Nested Loop (For Loop)
-        for (int hours = 0; hours < 12; hours++){
-            for (int minutes = 0; minutes < 60; minutes++){
-                for (int seconds = 0; seconds < 60; seconds++){
-                System.out.println(hours + " : " + minutes + " : " + seconds);
-                }
+        // for (int hours = 0; hours < 12; hours++){
+        //     for (int minutes = 0; minutes < 60; minutes++){
+        //         for (int seconds = 0; seconds < 60; seconds++){
+        //         System.out.println(hours + " : " + minutes + " : " + seconds);
+        //         }
+        //     }
+        // }
+
+            // Nested Loop with breaklines (Empty print callouts in Outer Loop serves as Break Lines.) 
+        char[][]Seats = {{'A','B','C'},{'D','E','F'},{'G','H','I'}};
+        for (int RS = 0; RS < 3; RS++){
+            System.out.println("");
+            for (int CS = 0; CS < 3; CS++){
+                System.out.print(Seats[RS][CS]);
             }
         }
-
     }
 }
