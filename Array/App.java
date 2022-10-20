@@ -55,13 +55,43 @@ public class App {
         //     }
         // }
 
-            // Nested Loop with breaklines (Empty print callouts in Outer Loop serves as Break Lines.) 
-        char[][]Seats = {{'A','B','C'},{'D','E','F'},{'G','H','I'}};
-        for (int RS = 0; RS < 3; RS++){
+            // Nested Loop with breaklines. Increment (Empty print callouts in Outer Loop serves as Break Lines.) 
+        // char[][]Seats = {{'A','B','C'},{'D','E','F'},{'G','H','I'}};
+        // for (int RS = 0; RS < 3; RS++){
+        //     System.out.println("");
+        //     for (int CS = 0; CS < 3; CS++){
+        //         System.out.print(Seats[RS][CS]);
+        //     }
+        // }
+
+            // Nested Loop with breaklines. Decrement
+        // char[][]Seats = {{'A','B','C'},{'D','E','F'},{'G','H','I'}};
+        // for (int RS = Seats.length - 1; RS >= 0; RS--){
+        //     System.out.println("");
+        //     for (int CS = Seats.length - 1; CS >= 0; CS--){
+        //         System.out.print(Seats[RS][CS]);
+        //     }
+        // }
+
+            // Pattern Loop
+        char[][]Seats = {{'A','B','C'},
+                         {'D','E','F'},
+                         {'G','H','I'},
+                         {'J','K','L'},
+                         {'M','N','O'},
+                         {'P','Q','R'}};
+        for (int RS = 0; RS < Seats.length; RS++){
             System.out.println("");
-            for (int CS = 0; CS < 3; CS++){
-                System.out.print(Seats[RS][CS]);
+            for (int CS = 0; CS < Seats[RS].length; CS++){
+                if(RS % 2 == 0 && CS % 2 == 0){
+                    System.out.print(Seats[RS][CS]);
+                } else if (RS % 2 == 1 && (CS % 2 == 1)){
+                    System.out.print(Seats[RS][CS]);
+                } else {
+                    System.out.print(" ");
+                }
             }
         }
     }
 }
+
