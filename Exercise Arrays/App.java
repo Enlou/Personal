@@ -64,6 +64,14 @@ public class Exercise {
         // PATTERN 6
         System.out.println("");
         System.out.println("6. SUM OF PATTERN 6");
+        int sum5 = 0;
+        for (int RS = 0; RS < mdArray.length; RS++){
+            for (int CS = 0; CS < mdArray.length; CS++){
+                if ((RS == 1 && CS == 2) || (RS == 2 && CS == 1) || (RS == 1 && CS == 1) || (RS == 2 && CS == 2) || (RS == 0 && CS == 3) || (RS == 3 && CS == 0) || (RS == 3 && CS == 3) || (RS == 0 && CS == 0))
+                    sum5 += (mdArray[RS][CS]);
+            }
+        }
+        System.out.printf("%4s",sum5);
 
     }
   }
