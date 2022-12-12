@@ -1,36 +1,61 @@
 import java.util.Scanner;
+public class Attendance2ulit {
 
-class Attendance2ulit {
-	
-	public static void main(String[] args) {
+    static int[] ArrayKo = {15, 30, 25, 19, 30, 40};
+    public static void main(String[] args) {
 
-		String[]Arraykobes = {"15", "30", "25", "19", "30", "40"};
-		
-		System.out.print("List: " + Arraykobes);
+        ShowMe();
+        Scanner sc = new Scanner(System.in);
 
-		Arraykobes = removeWord(Arraykobes);
-		System.out.print("New List: " + Arraykobes);
-	}
-	
-	public static String[] removeWord(String[]Arraykobes){
-		
-		String[]ArrayLess = new String[Arraykobes.length-1];
-		
-		Scanner in = new Scanner(System.in);
-		System.out.println("Enter an element to delete: ");
-		String removeelement = in.nextLine();
-		
-		int indexLess = 0;
-		
-		for(int i = 0; i < Arraykobes.length; i++)
-		{
-			if(!Arraykobes[i].equalsIgnoreCase(removeelement)) {
-			ArrayLess[indexLess] = Arraykobes[i];
-			indexLess++;
-			}
-		}
-		
-		return ArrayLess;
-		
-	}
-}
+        while (!ArrayCheck()) {
+            System.out.println("Enter an element to delete: ");
+            int nomnom = sc.nextInt();
+
+            find(nomnom);
+            call(nomnom);
+            ShowMe();
+    }
+        System.out.println("Array is Empty.");
+    }
+
+    static void ShowMe() {
+        for (int a = 0; a < ArrayKo.length; a++){
+            if (ArrayKo[a] > 0) {
+                System.out.print(ArrayKo[a] + " ");
+            }
+        }
+        System.out.println("");
+    }
+
+    static void find(int nomnom) {
+        for (int b = 0; b < ArrayKo.length; b++){
+            if (nomnom == ArrayKo[b]) {
+                ArrayKo[b] = 0;
+            }
+        }
+    }
+
+    static boolean ArrayCheck() {
+        int ArrayCheck = 0;
+        for (int c = 0; c < ArrayKo.length; c++) {
+            if (ArrayKo[c] != 0) {
+                continue;
+            } else {
+                ArrayCheck++;
+            }
+            if (ArrayCheck == 6) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+        static void call (int nomnom) {
+            if(!( nomnom == 15 || nomnom == 30 || nomnom == 25 || nomnom == 19 || nomnom == 30 || nomnom == 40 )){
+                System.out.println("Invalid Element!");
+            }
+        }
+    }
+
+
