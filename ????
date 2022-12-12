@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Attendance2ulit {
+	
+	public static void main(String[] args) {
+
+		String[]Arraykobes = {"15", "30", "25", "19", "30", "40"};
+		
+		System.out.print("List: " + Arraykobes);
+
+		Arraykobes = removeWord(Arraykobes);
+		System.out.print("New List: " + Arraykobes);
+	}
+	
+	public static String[] removeWord(String[]Arraykobes){
+		
+		String[]ArrayLess = new String[Arraykobes.length-1];
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter an element to delete: ");
+		String removeelement = in.nextLine();
+		
+		int indexLess = 0;
+		
+		for(int i = 0; i < Arraykobes.length; i++)
+		{
+			if(!Arraykobes[i].equalsIgnoreCase(removeelement)) {
+			ArrayLess[indexLess] = Arraykobes[i];
+			indexLess++;
+			}
+		}
+		
+		return ArrayLess;
+		
+	}
+}
