@@ -46,9 +46,10 @@ public class Attendance2ulit {
             if (ArrayCheck == 6) {
                 return true;
             } else {
-                return false;
+                // return false;
             }
         }
+        return false;
     }
 
         static void call (int nomnom) {
