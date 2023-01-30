@@ -10,7 +10,7 @@ public class Factorial {
     try {
 		    System.out.print("The factorial of " + a + " is: " + factorial(a));
 	  } catch (IllegalArgumentException e) {
-        System.out.println("Invalid Input: " + E.getMessage());
+        System.out.println("Invalid Input: " + e.getMessage());
     }
   }  
 	
