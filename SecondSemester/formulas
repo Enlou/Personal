@@ -1,0 +1,2 @@
+n * FactorialRec(n-1)
+Euclid(N,M%N)
